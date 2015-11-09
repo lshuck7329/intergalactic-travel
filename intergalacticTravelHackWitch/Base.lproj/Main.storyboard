@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Intergalactic Travel Inc.-->
@@ -25,6 +24,9 @@
                                     <constraint firstAttribute="height" constant="30" id="juh-qz-2BL"/>
                                 </constraints>
                                 <state key="normal" title="Visit Red Dwarf"/>
+                                <connections>
+                                    <segue destination="QnH-aY-Rsy" kind="show" identifier="theRedDwarfSegue" id="Uwa-pa-nma"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDa-dx-AEF">
                                 <rect key="frame" x="252" y="194" width="96" height="30"/>
@@ -34,7 +36,7 @@
                                 </constraints>
                                 <state key="normal" title="Visit Blue Star"/>
                                 <connections>
-                                    <segue destination="QnH-aY-Rsy" kind="show" id="WYx-1s-UX6"/>
+                                    <segue destination="QnH-aY-Rsy" kind="show" identifier="theBlueStarSegue" id="WYx-1s-UX6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,23 +65,12 @@
                     <view key="view" contentMode="scaleToFill" id="aWA-Xh-zLh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue star" translatesAutoresizingMaskIntoConstraints="NO" id="blU-Gn-MIz">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="blU-Gn-MIz" secondAttribute="trailing" constant="-20" id="ROk-6D-8Ve"/>
-                            <constraint firstItem="blU-Gn-MIz" firstAttribute="top" secondItem="aWA-Xh-zLh" secondAttribute="topMargin" id="YdV-9m-14g"/>
-                            <constraint firstItem="blU-Gn-MIz" firstAttribute="leading" secondItem="aWA-Xh-zLh" secondAttribute="leadingMargin" constant="-20" id="cRL-2d-7te"/>
-                            <constraint firstItem="84u-CK-sWI" firstAttribute="top" secondItem="blU-Gn-MIz" secondAttribute="bottom" id="oiH-ie-Enq"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VwU-7E-Jjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1934" y="349"/>
+            <point key="canvasLocation" x="1272" y="1064"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BLd-Gr-2UH">
@@ -100,7 +91,7 @@
             <point key="canvasLocation" x="462" y="-343"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="blue star" width="319" height="158"/>
-    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Uwa-pa-nma"/>
+    </inferredMetricsTieBreakers>
 </document>

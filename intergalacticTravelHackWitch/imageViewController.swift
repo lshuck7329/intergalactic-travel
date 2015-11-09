@@ -14,8 +14,12 @@ class imageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        if isBlueStar! {
+            self.view.backgroundColor = UIColor.blueColor()
+        }
+        else {
+            self.view.backgroundColor = UIColor.redColor()
+        }
     }
 
     
